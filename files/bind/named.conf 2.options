@@ -1,0 +1,26 @@
+acl clients {
+  localhost;
+  localnets;
+};
+
+options {
+
+  directory "/var/cache/bind";
+
+  recursion yes;
+  allow-query { clients; };
+  allow-recursion { clients; };
+
+  forwarders {
+    # Cloudflare
+    1.1.1.1;
+    1.0.0.1;
+  };
+
+  dnssec-enable yes;
+  dnssec-validation auto;
+
+  auth-nxdomain no;
+  listen-on { 127.0.0.1; };
+
+};

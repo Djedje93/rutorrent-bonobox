@@ -20,7 +20,7 @@
 # apt-get install git-core -y
 #
 # cd /tmp
-# git clone https://github.com/exrat/rutorrent-bonobox
+# git clone https://github.com/Djedje93/rutorrent-bonobox
 # cd rutorrent-bonobox
 # chmod a+x bonobox.sh && ./bonobox.sh
 #
@@ -280,7 +280,7 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 
 	# installation xmlrpc libtorrent rtorrent
 	cd /tmp || exit
-	"$CMDGIT" clone --progress https://github.com/mirror/xmlrpc-c.git
+	"$CMDGIT" clone --progress https://github.com/Djedje93/xmlrpc-c.git
 
 	cd xmlrpc-c/stable || exit
 	./configure #--disable-cplusplus
@@ -290,8 +290,8 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 
 	# clone rtorrent et libtorrent
 	cd /tmp || exit
-	"$CMDGIT" clone --progress https://github.com/rakshasa/libtorrent.git
-	"$CMDGIT" clone --progress https://github.com/rakshasa/rtorrent.git
+	"$CMDGIT" clone --progress https://github.com/Djedje93/libtorrent.git
+	"$CMDGIT" clone --progress https://github.com/Djedje93/rtorrent.git
 
 	# compilation libtorrent
 	cd libtorrent || exit
@@ -323,7 +323,7 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 	"$CMDCP" -R "$BONOBOX"/base "$NGINXBASE"
 
 	# téléchargement et déplacement de rutorrent
-	"$CMDGIT" clone --progress https://github.com/Novik/ruTorrent.git "$RUTORRENT"
+	"$CMDGIT" clone --progress https://github.com/Djedje93/ruTorrent.git "$RUTORRENT"
 	"$CMDECHO" ""; set "146" "134"; FONCTXT "$1" "$2"; "$CMDECHO" -e "${CBLUE}$TXT1${CEND}${CGREEN}$TXT2${CEND}"; "$CMDECHO" ""
 
 	# installation des plugins - thank Micdu70 ;)
@@ -392,7 +392,7 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 	"$CMDGIT" clone --progress https://github.com/themightykitten/ruTorrent-MaterialDesign.git "$RUPLUGINS"/theme/themes/MaterialDesign
 
 	# configuration thème
-	"$CMDSED" -i "s/defaultTheme = \"\"/defaultTheme = \"SpiritOfBonobo\"/g;" "$RUPLUGINS"/theme/conf.php
+	"$CMDSED" -i "s/defaultTheme = \"\"/defaultTheme = \"Oblivion\"/g;" "$RUPLUGINS"/theme/conf.php
 
 	"$CMDECHO" ""; set "148" "134"; FONCTXT "$1" "$2"; "$CMDECHO" -e "${CBLUE}$TXT1${CEND}${CGREEN}$TXT2${CEND}"; "$CMDECHO" ""
 
