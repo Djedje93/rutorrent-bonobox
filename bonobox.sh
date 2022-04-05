@@ -290,8 +290,8 @@ if [ ! -f "$NGINXENABLE"/rutorrent.conf ]; then
 
 	# clone rtorrent et libtorrent
 	cd /tmp || exit
-	"$CMDGIT" clone --progress https://github.com/Djedje93/libtorrent.git
-	"$CMDGIT" clone --progress https://github.com/Djedje93/rtorrent.git
+	"$CMDGIT" clone --progress https://github.com/rakshasa/libtorrent.git
+	"$CMDGIT" clone --progress https://github.com/rakshasa/rtorrent.git
 
 	# compilation libtorrent
 	cd libtorrent || exit
